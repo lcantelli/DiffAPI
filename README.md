@@ -1,4 +1,4 @@
-# NetCoreProjectTemplate
+# DiffAPI
 
 
-[![Build Status](https://travis-ci.org/lcantelli/NetCoreProjectTemplate.svg?branch=master)](https://travis-ci.org/lcantelli/NetCoreProjectTemplate)
+[![Build Status](https://travis-ci.org/lcantelli/DiffAPI.svg?branch=master)](https://travis-ci.org/lcantelli/DiffAPI)
