@@ -39,7 +39,7 @@ namespace DiffAPI.Repository
 
         public async Task SaveJson(string id, string json, Side side)
         {
-            var jsonById = await GetById(id);
+            var jsonById = await GetById(id) ?? new Json();
 
             if (side == Side.Left)
             {
