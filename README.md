@@ -3,6 +3,11 @@
 
 [![Build Status](https://travis-ci.org/lcantelli/DiffAPI.svg?branch=master)](https://travis-ci.org/lcantelli/DiffAPI)
 
+<img src="https://docs.microsoft.com/pt-br/dotnet/images/hub/net.svg" width="48">
+
+<img src="https://cdn.worldvectorlogo.com/logos/cucumber.svg" width="40">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" width="40">
 
 ## Getting Started
 
