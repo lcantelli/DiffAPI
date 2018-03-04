@@ -11,18 +11,24 @@
 ### Running
 
 ```bash
-    <!-- Access project folder -->
-    <!-- Start SQLServerExpress instance -->
-    docker-compose up -d 
-    
-    <!-- Access API folder -->
+    #Clone Git Repository
+    git clone git@github.com:lcantelli/DiffAPI.git
+
+    #Access Project Root Folder
     cd DiffAPI
 
-    <!-- Create/Update database schema-->
+    #Start SQLServerExpress instance
+    docker-compose up -d 
+    
+    #Access API folder -->
+    cd DiffAPI
+
+    #Create/Update database schema-->
     dotnet ef database update
 
-    <!-- Run API -->
+    #Run API
     dotnet run
 
-    <!-- Access through address: localhost:5000/swagger -->
+    #Access through address:
+    http://localhost:5000/swagger
 ```
