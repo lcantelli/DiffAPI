@@ -20,10 +20,10 @@
     #Start SQLServerExpress instance
     docker-compose up -d 
     
-    #Access API folder -->
+    #Access API folder
     cd DiffAPI
 
-    #Create/Update database schema-->
+    #Create/Update database schema
     dotnet ef database update
 
     #Run API
