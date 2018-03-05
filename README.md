@@ -58,6 +58,12 @@ Run the API using the commands described above, then:
     docker build -t cucumbermachine . && docker run --net=host -it cucumbermachine cucumber features
 ```
 
+### Code Coverage
+
+Minimum required for the service classes is 80%. Check below:
+
+<img src="https://i.imgur.com/BgJlug2.png" width="500">
+
 ### Usage
 
 Three endpoints are available:
