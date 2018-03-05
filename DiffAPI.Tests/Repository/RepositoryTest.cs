@@ -11,11 +11,12 @@ namespace DiffAPI.Tests.Repository
     {
         private static readonly MockHelper Mock = new MockHelper();
         private readonly Json _modelHelper = Mock.GetModelHelper();
-        private readonly Mock<IRepository> _mockRepository = new Mock<IRepository>();
+        private readonly Mock<IJsonRepository> _mockRepository = new Mock<IJsonRepository>();
 
         [Fact]
         public void Should_Return_Json()
         {
+            //Arrange
             _mockRepository.Setup(x => x.GetById(_modelHelper.JsonId)).Returns(Task.FromResult(new Json()
             {
                 Id = 1,
@@ -23,9 +24,9 @@ namespace DiffAPI.Tests.Repository
                 Left = _modelHelper.Left,
                 Right = _modelHelper.Right
             }));
-
+            //Act
             var result = _mockRepository.Object.GetById(_modelHelper.JsonId).Result;
-
+            //Assert
             Assert.Equal(_modelHelper.Right, result.Right);
             Assert.Equal(_modelHelper.Left, result.Left);
         }
@@ -33,6 +34,7 @@ namespace DiffAPI.Tests.Repository
         [Fact]
         public void Should_Add_Or_Update_Json()
         {
+            //Arrange
             _mockRepository.Setup(x => x.AddOrUpdate(It.IsAny<Json>())).Returns(true);
 
             var json = new Json
@@ -42,9 +44,9 @@ namespace DiffAPI.Tests.Repository
                 Left = _modelHelper.Left,
                 Right = null
             };
-
+            //Act
             var response = _mockRepository.Object.AddOrUpdate(json);
-
+            //Assert
             Assert.True(response);
         }
     }

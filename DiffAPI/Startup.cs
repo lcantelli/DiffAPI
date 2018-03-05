@@ -21,18 +21,21 @@ namespace DiffAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Adds Context to API using default connection string
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<DatabaseContext>(options => 
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
             
+            //Adds Swagger service to API
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "JSON Diff", Version = "v1" });
             });
             
-            services.AddTransient<IRepository, Repository.Repository>();
+            //Dependency Injection Registries
+            services.AddTransient<IJsonRepository, JsonRepository>();
             services.AddTransient<IDiffService, DiffService>();
             services.AddTransient<IEncodeService, EncodeService>();
         }
@@ -45,6 +48,7 @@ namespace DiffAPI
                 app.UseDeveloperExceptionPage();
             }
             
+            //Adds Swagger service to API
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>

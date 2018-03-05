@@ -8,13 +8,16 @@ using Moq;
 
 namespace DiffAPI.Tests.Utils
 {
+    /// <summary>
+    /// Returns mocked Diff Controller and basic JSON object to be used on unit tests
+    /// </summary>
     public class MockHelper
     {
         public DiffController GetMockedDiffController(Json json)
         {
             var jsonId = "99";
 
-            var mockRepository = new Mock<IRepository>();
+            var mockRepository = new Mock<IJsonRepository>();
             mockRepository.Setup(x => x.GetById(jsonId)).Returns(Task.FromResult(json));
             mockRepository.Setup(x => x.AddOrUpdate(It.IsAny<Json>()));
             mockRepository.Setup(x => x.SaveChanges());

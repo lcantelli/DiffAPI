@@ -3,7 +3,11 @@ using DiffAPI.Models;
 
 namespace DiffAPI.Repository
 {
-    public interface IRepository
+    /// <summary>
+    /// Repository Interface
+    /// Documentation on Implementation
+    /// </summary>
+    public interface IJsonRepository
     {
         Task<Json> GetById(string id);
         bool AddOrUpdate(Json obj);
