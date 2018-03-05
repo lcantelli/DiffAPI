@@ -70,8 +70,11 @@ To encode and decode JSON: https://www.browserling.com/tools/json-to-base64
 
 1. Access http://localhost:5000/swagger
 2. Encode a JSON to base64 format
+    
     (for {"Name": "Lucas"}, use: eyJOYW1lIjogIkx1Y2FzIn0=)
+
     (for {"Name": "Robert"}, use: eyJOYW1lIjogIlJvYmVydCJ9)
+
 3. Use the "right" endpoint, saving the first encoded string using ID 1
 4. Use the "left" endpoint, saving the second encoded string using ID 1
 5. Use the "diff" endpoint and ID 1. The result should be:
