@@ -20,7 +20,7 @@ Feel free to copy and improve this project.
 
 ### Prerequisites
 
-- .NET SDK 2.1.3
+- .NET Core SDK 2.1.3
 - docker (for SQL Server container and Acceptance Tests)
 
 ### Intalling and Running
