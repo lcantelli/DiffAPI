@@ -52,6 +52,8 @@ Feel free to copy and improve this project.
 
 ```
 
+[![asciicast](https://asciinema.org/a/HsdRjuaABlgUNLg3JTM43QvYj.png)](https://asciinema.org/a/HsdRjuaABlgUNLg3JTM43QvYj)
+
 ### Acceptance Tests with Cucumber + Ruby
 
 Run the API using the commands described above, then:
@@ -60,6 +62,8 @@ Run the API using the commands described above, then:
     #Access project root folder
     docker build -t cucumbermachine . && docker run --net=host -it cucumbermachine cucumber features
 ```
+
+[![asciicast](https://asciinema.org/a/cTNwvSO4Evf0Mf16bYV8fcSgA.png)](https://asciinema.org/a/cTNwvSO4Evf0Mf16bYV8fcSgA)
 
 ### Code Coverage
 
