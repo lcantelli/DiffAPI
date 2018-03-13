@@ -38,6 +38,9 @@ Feel free to copy and improve this project.
     #Access API folder
     cd DiffAPI
 
+    #Build and Restore packages
+    dotnet restore
+
     #Create/Update database schema
     dotnet ef database update
 
